@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'session/style.css' %}">
+</head>
+<body>
+    <div class="left">
+        <h2>Add a new word</h2>
+        <form action="add/", method='post'>
+            {% csrf_token %}
+
+            <input type="text" name="word">
+            <p>Choose color</p>
+            <input type="radio" name="color" value="red">Red
+            <input type="radio" name="color" value="green">Green
+            <input type="radio" name="color" value="blue">Blue
+            <p><input type="checkbox" name="fonts">show in BIG fonts!</p>
+            <p><input type="submit" value="Add to Session"></p>
+        </form>
+    </div>
+    <div class="left">
+        <a href="reset/"><button>Clear Session</button></a> 
+        {% for i in activities %}
+            <p><span class="{{i.color}} {{i.fonts}}">{{i.word}}</span> -added on {{i.time}}, {{ i.date }}</p>
+        {% endfor %}
+
+    </div>
+    
+</body>
+</html>
