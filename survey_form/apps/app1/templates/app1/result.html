@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Result</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app1/style.css' %}">
+</head>
+<body>
+    <div id="container">
+        <div id="content1">
+            Thanks for submitting this form! You have submitted this
+                form {{request.session.counter}} times now.
+            
+        </div>
+        <div class="content">
+            <p id="bigtext">Submitted Information </p>
+            <p>Name: {{request.session.name}} </p>
+            <p><span>Dojo Location:</span> {{request.session.location}}</p>
+            <p><span>Favorite Language:</span> {{request.session.language}}</p>
+            <p><span>Comment:</span> {{request.session.desc}}</p>
+            
+        </div>
+        <a href="/"><button>Go Back</button></a>
+    </div>
+    
+</body>
+</html>
