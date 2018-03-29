@@ -1,0 +1,24 @@
+#wrapper {
+    width: 500px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: lightgrey;
+    height: auto;
+}
+h4 {
+    padding: 20px;
+}
+h1 {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 30px;
+    
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px black;
+    font-style: bold;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'random_word/style.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <h4>Random Word (attempt # {{request.session.counter}})</h4>
+        <h1>{{word}}</h1>
+        <form class="button" action = "generate/", method="post">
+            {% csrf_token %}
+            <input type="submit" value="Generate">
+        </form>
+        <form class="button" action = "reset/", method="post">
+            {% csrf_token %}
+            <input type="submit" value="Reset">
+        </form>
+    </div>
+</body>
+</html>
