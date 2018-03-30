@@ -1,0 +1,20 @@
+tr, th, td{
+    padding: 10px 20px;
+    border: 1px solid black;
+}
+
+input[type="submit"] {
+    box-shadow : 2px 2px 2px black;
+}
+
+th {
+    background-color: blue;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(200, 225, 233);
+}
+
+table {
+    border: 2px groove black;
+}
